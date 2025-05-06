@@ -54,9 +54,12 @@
 ### 3. **Determinar Rango de Hosts Válidos**
 **Ejemplo**: `172.20.106.22/20`  
 1. **Máscara**: `255.255.240.0` → Bloques de `16` en el 3er octeto.  
-2. **Dirección de red**:  
+2. **Dirección de red**:
+     Se calcula haciendo la puerta AND entre la IP y la Mascara de red
    - `172.20.106.22 AND 255.255.240.0` → `172.20.96.0`.  
-3. **Broadcast**: `172.20.111.255`.  
+3. **Broadcast**:
+     Se calcula poniendo en 1 el tantos digitos como tiene de bits de numero de hosts
+   - `172.20.111.255`.
 4. **Hosts válidos**: `172.20.96.1` a `172.20.111.254`.  
 
 ---
